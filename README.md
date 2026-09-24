@@ -50,7 +50,13 @@ This project uses a plain Python virtual environment (no Anaconda required):
 python -m venv .venv
 source .venv/Scripts/activate
 pip install -r requirements.txt
+pip install -e .
 ```
+The last line installs `src/` as an editable package (`housing_risk`), so
+notebooks can `from housing_risk.config import get_engine` instead of
+redefining the database connection and split/CV cutoff dates in every
+notebook.
+
 Create a `.env` file in the project root (never committed — see `.gitignore`) with:
 ```
 PGHOST=...
