@@ -154,6 +154,10 @@ data/processed/*
 !data/processed/.gitkeep
 *.db
 
+# Committed DB export data (rebuildable from the ingest notebooks)
+db/data/*
+!db/data/.gitkeep
+
 # Trained model artifacts
 models/*
 !models/.gitkeep
