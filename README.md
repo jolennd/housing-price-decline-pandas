@@ -12,7 +12,7 @@ This question is deliberately framed as a *marginal contribution* question rathe
 
 | Source | Grain | What it provides |
 |---|---|---|
-| Zillow ZHVI | County, monthly | Home value index — builds the price-decline label and momentum features |
+| Zillow ZHVI (Middle Tier, 33rd-67th percentile, SFR + Condo/Co-op, Smoothed & Seasonally Adjusted) | County, monthly | Home value index — builds the price-decline label and momentum features |
 | FRED `MORTGAGE30US` | National, weekly (resampled to monthly) | 30-year fixed mortgage rate — builds rate level, rate-of-change, and interaction features |
 
 Both sources resolve to county FIPS or national scope without a crosswalk file.
@@ -21,34 +21,50 @@ Both sources resolve to county FIPS or national scope without a crosswalk file.
 
 ```
 data/         raw and processed data (not tracked in git)
-notebooks/    one notebook per phase (phase1_zillow_ingest.ipynb, etc.)
-src/          reusable Python helper functions
-outputs/      exported charts and files
+notebooks/    one notebook per phase, numbered 01-10 (see Phase Plan below)
+src/          reusable Python helper functions (housing_risk package)
+outputs/      exported charts, persisted results, and CV fold definitions
+docs/         business framing and team reference documentation
+db/           SQL schema and (gitignored) data exports
 ```
+
 ## Phase Plan
 
-| Phase | What's involved |
-|---|---|
-| Phase 0 — Framing | Business question, field scope, evaluation metric, success criteria |
-| Phase 1 — Ingest/clean | Zillow + FRED ingest, county-FIPS join, monthly table |
-| Feature engineering | Momentum, rate level, rate-of-change, interaction term |
-| Phase 2 — EDA | Distributions, lag-correlation analysis |
-| Phase 3 — Split | Chronological train/test split, time series CV |
-| Phase 6 — Modeling | Baseline (momentum only) → + rate level → + rate-of-change/interaction → robustness check |
-| Phase 7 — Evaluation | Marginal AUC deltas, bootstrap confidence intervals |
-| Phase 8 — Communication | Streamlit dashboard, repo, slides |
+| Phase | What's involved | Notebook(s) |
+|---|---|---|
+| Phase 0 — Framing | Business question, field scope, evaluation metric, success criteria | `docs/phase0_framing.md` |
+| Phase 1 — Ingest/clean | Zillow ingest, FRED ingest, county-FIPS join into `county_month_check` | `01_zillow_ingest_clean.ipynb`, `02_fred_ingest_clean.ipynb`, `02b_fred_resample_sensitivity.ipynb`, `03_join_sql_load.ipynb` |
+| Phase 2 — Split | Chronological train/embargo/test split, expanding-window time series CV | `05_split_cv.ipynb` |
+| Phase 3 — EDA | Distributions, lag-correlation analysis (training data only) | `06_eda.ipynb` |
+| Phase 4 — Feature engineering | Momentum, rate level, rate-of-change, interaction term | `07_feature_engineering.ipynb` |
+| Phase 5 — Modeling | Baseline (momentum only) → + rate level → + rate-of-change/interaction → robustness check (second algorithm) | `08_modeling_sequence.ipynb`, `09_robustness_second_algo.ipynb` |
+| Phase 6 — Final evaluation | Marginal AUC deltas on the held-out test set, bootstrap confidence intervals, final write-up | `10_final_evaluation.ipynb` |
+| Phase 7 — Communication | Dashboard, repo, slides | *(not started)* |
+
+`04_teammate_pandas_comparison.ipynb` is a standalone comparison against a teammate's independent ingest pipeline and isn't part of the numbered phase sequence above.
+
+Full phase-by-phase detail, success criteria, and data provenance figures live in `docs/Housing_Price_Decline_Team_Reference.md` and `docs/phase0_framing.md`.
 
 ## Status
 
-- ✅ Phase 0 — Framing (complete, see `notebooks/phase0_framing.md`)
-- 🔲 Phase 1 — Ingest/clean (not started)
+- ✅ Phase 0 — Framing
+- ✅ Phase 1 — Ingest/clean
+- ✅ Phase 2 — Split
+- ✅ Phase 3 — EDA
+- ✅ Phase 4 — Feature engineering
+- ✅ Phase 5 — Modeling
+- ✅ Phase 6 — Final evaluation
+- 🔲 Phase 7 — Communication (not started)
+
+**Open item:** the empirical check confirming Zillow's ZHVI smoothing filter is trailing rather than centered (i.e. that momentum features don't leak future information) has not yet been run against this project's own downloaded data — see `docs/Housing_Price_Decline_Team_Reference.md`'s ZHVI Smoothing Verification section for what that check involves.
+
 ## Setup
 
 This project uses a plain Python virtual environment (no Anaconda required):
 
 ```
 python -m venv .venv
-source .venv/Scripts/activate
+source .venv/bin/activate
 pip install -r requirements.txt
 pip install -e .
 ```
@@ -65,6 +81,7 @@ PGDATABASE=...
 PGUSER=...
 PGPASSWORD=...
 ```
+
 ## Collaboration
 
 Built in parallel with a teammate's own repo — each phase is independently attempted by both, compared, and the better (or merged) version is carried into the shared final repo. Decisions and comparison results are logged as they happen.
