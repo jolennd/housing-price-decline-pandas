@@ -43,6 +43,8 @@ db/           SQL schema and (gitignored) data exports
 
 `04_teammate_pandas_comparison.ipynb` is a standalone comparison against a teammate's independent ingest pipeline and isn't part of the numbered phase sequence above.
 
+`00_zhvi_smoothing_check.ipynb` also isn't part of the numbered phase sequence -- it's a foundational leakage-safety check (confirms Zillow's ZHVI smoothing filter is trailing, not centered) that the momentum features in Phase 4 depend on, run once rather than tied to a specific phase.
+
 Full phase-by-phase detail, success criteria, and data provenance figures live in `docs/Housing_Price_Decline_Team_Reference.md` and `docs/phase0_framing.md`.
 
 ## Status
@@ -56,7 +58,7 @@ Full phase-by-phase detail, success criteria, and data provenance figures live i
 - ✅ Phase 6 — Final evaluation
 - 🔲 Phase 7 — Communication (not started)
 
-**Open item:** the empirical check confirming Zillow's ZHVI smoothing filter is trailing rather than centered (i.e. that momentum features don't leak future information) has not yet been run against this project's own downloaded data — see `docs/Housing_Price_Decline_Team_Reference.md`'s ZHVI Smoothing Verification section for what that check involves.
+The empirical check confirming Zillow's ZHVI smoothing filter is trailing rather than centered (i.e. that momentum features don't leak future information) has been run against this project's own downloaded data in `notebooks/00_zhvi_smoothing_check.ipynb` — confirmed trailing, not centered. See `docs/Housing_Price_Decline_Team_Reference.md`'s ZHVI Smoothing Verification section for the full result.
 
 ## Setup
 

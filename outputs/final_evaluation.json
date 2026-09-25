@@ -1,0 +1,89 @@
+{
+  "test_window": {
+    "start": "2022-01-01",
+    "end": "2026-03-31"
+  },
+  "test_data_quality_gate": {
+    "observed_rows": 48960,
+    "observed_positive_rate_pct": 8.527369281045752,
+    "expected_rows_per_phase0_framing": 52087,
+    "expected_positive_rate_pct_per_phase0_framing": 8.15
+  },
+  "final_scores_full_feature_set": {
+    "logistic_regression": {
+      "roc_auc": 0.8613827475115639,
+      "pr_auc": 0.4797190735269827
+    },
+    "xgboost": {
+      "roc_auc": 0.8746775859913533,
+      "pr_auc": 0.44655506387405897
+    }
+  },
+  "test_step_scores": {
+    "logistic_regression": {
+      "baseline": {
+        "roc_auc": 0.8639821582691488,
+        "pr_auc": 0.5093964877152927
+      },
+      "step2_rate_level": {
+        "roc_auc": 0.864790453925241,
+        "pr_auc": 0.5153506355411313
+      },
+      "step3_rate_change": {
+        "roc_auc": 0.8613827475115639,
+        "pr_auc": 0.4797190735269827
+      }
+    },
+    "xgboost": {
+      "baseline": {
+        "roc_auc": 0.8822475500043788,
+        "pr_auc": 0.46149332213679317
+      },
+      "step2_rate_level": {
+        "roc_auc": 0.8730922310787601,
+        "pr_auc": 0.4242470852084078
+      },
+      "step3_rate_change": {
+        "roc_auc": 0.8746775859913533,
+        "pr_auc": 0.44655506387405897
+      }
+    }
+  },
+  "test_deltas": {
+    "logistic_regression": {
+      "step2_vs_baseline": {
+        "point_delta": 0.000808295656092195,
+        "ci_95_low": -0.0027010773948285076,
+        "ci_95_high": 0.0038791176508522532,
+        "n_bootstrap_used": 2000,
+        "significant": false
+      },
+      "step3_vs_step2": {
+        "point_delta": -0.0034077064136771584,
+        "ci_95_low": -0.02216554390805328,
+        "ci_95_high": 0.018581661311270124,
+        "n_bootstrap_used": 2000,
+        "significant": false
+      }
+    },
+    "xgboost": {
+      "step2_vs_baseline": {
+        "point_delta": -0.009155318925618716,
+        "ci_95_low": -0.019068940630696033,
+        "ci_95_high": -0.0003309332266588742,
+        "n_bootstrap_used": 2000,
+        "significant": true
+      },
+      "step3_vs_step2": {
+        "point_delta": 0.001585354912593151,
+        "ci_95_low": -0.007679809718913988,
+        "ci_95_high": 0.01021901773972751,
+        "n_bootstrap_used": 2000,
+        "significant": false
+      }
+    }
+  },
+  "robustness_holds_on_test": true,
+  "n_bootstrap": 2000,
+  "random_state": 42
+}

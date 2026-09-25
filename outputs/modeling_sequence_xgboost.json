@@ -1,0 +1,75 @@
+{
+  "algorithm": "xgboost",
+  "feature_steps": {
+    "baseline": [
+      "momentum_1m",
+      "momentum_3m",
+      "momentum_6m"
+    ],
+    "step2_rate_level": [
+      "momentum_1m",
+      "momentum_3m",
+      "momentum_6m",
+      "mortgage_rate_level"
+    ],
+    "step3_rate_change": [
+      "momentum_1m",
+      "momentum_3m",
+      "momentum_6m",
+      "mortgage_rate_level",
+      "mortgage_rate_roc",
+      "rate_roc_x_momentum"
+    ]
+  },
+  "step_summaries": {
+    "baseline": {
+      "mean_roc_auc": 0.8787178439392729,
+      "std_roc_auc": 0.028403586693101793,
+      "mean_pr_auc": 0.3416055238378753,
+      "std_pr_auc": 0.12475687840820265,
+      "pooled_roc_auc": 0.8978787268506346,
+      "pooled_pr_auc": 0.40698412400906436,
+      "pooled_prevalence": 0.03621157681123771,
+      "n_folds": 11
+    },
+    "step2_rate_level": {
+      "mean_roc_auc": 0.869105932079314,
+      "std_roc_auc": 0.028379439218981617,
+      "mean_pr_auc": 0.3437521330182769,
+      "std_pr_auc": 0.11943014822785424,
+      "pooled_roc_auc": 0.8894622717876003,
+      "pooled_pr_auc": 0.3394751484079577,
+      "pooled_prevalence": 0.03621157681123771,
+      "n_folds": 11
+    },
+    "step3_rate_change": {
+      "mean_roc_auc": 0.8690514389693514,
+      "std_roc_auc": 0.04043325008360637,
+      "mean_pr_auc": 0.32591915385998543,
+      "std_pr_auc": 0.11709582676081308,
+      "pooled_roc_auc": 0.8917829295300984,
+      "pooled_pr_auc": 0.3462704236699652,
+      "pooled_prevalence": 0.03621157681123771,
+      "n_folds": 11
+    }
+  },
+  "min_fold_positives": 20,
+  "n_folds_used": 11,
+  "delta_step2_vs_baseline": {
+    "point_delta": -0.008416455063034345,
+    "ci_95_low": -0.014876332494945637,
+    "ci_95_high": -0.0016742409148982342,
+    "n_bootstrap_used": 2000,
+    "significant": true
+  },
+  "delta_step3_vs_step2": {
+    "point_delta": 0.0023206577424981223,
+    "ci_95_low": -0.004223098875090725,
+    "ci_95_high": 0.008806861858033537,
+    "n_bootstrap_used": 2000,
+    "significant": false
+  },
+  "n_bootstrap": 2000,
+  "random_state": 42,
+  "ranking_matches_logreg": true
+}

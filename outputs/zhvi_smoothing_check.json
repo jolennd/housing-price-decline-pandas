@@ -1,0 +1,81 @@
+{
+  "national_turning_points": {
+    "raw_peaks": [
+      "2022-07-31",
+      "2023-08-31",
+      "2024-08-31"
+    ],
+    "raw_troughs": [
+      "2023-02-28",
+      "2024-01-31"
+    ],
+    "smoothed_peaks": [
+      "2022-08-31",
+      "2023-11-30"
+    ],
+    "smoothed_troughs": [
+      "2023-02-28",
+      "2024-01-31"
+    ]
+  },
+  "county_turning_points": {
+    "selected_county_fips": "06085",
+    "selected_county_name": "Santa Clara County",
+    "sharpest_decline_pct": -0.04316658616288804,
+    "sharpest_decline_month": "2022-08-31",
+    "raw_peaks": [
+      "2021-07-31",
+      "2022-05-31",
+      "2023-10-31",
+      "2024-06-30"
+    ],
+    "raw_troughs": [
+      "2021-09-30",
+      "2023-01-31",
+      "2024-01-31",
+      "2024-10-31"
+    ],
+    "smoothed_peaks": [
+      "2022-05-31",
+      "2024-01-31"
+    ],
+    "smoothed_troughs": [
+      "2023-05-31",
+      "2024-02-29"
+    ]
+  },
+  "lag_correlations": {
+    "0": {
+      "past_corr": 0.6449506937056302,
+      "future_corr": 0.6449506937056302
+    },
+    "1": {
+      "past_corr": 0.6815577225745327,
+      "future_corr": 0.4344280578811156
+    },
+    "2": {
+      "past_corr": 0.6027479143303639,
+      "future_corr": 0.32618303928032677
+    },
+    "3": {
+      "past_corr": 0.3722305542853224,
+      "future_corr": 0.25626453959882656
+    },
+    "4": {
+      "past_corr": 0.2650325915132573,
+      "future_corr": 0.20291671501894196
+    },
+    "5": {
+      "past_corr": 0.2155175920337977,
+      "future_corr": 0.16120283783188255
+    },
+    "6": {
+      "past_corr": 0.19780139061239935,
+      "future_corr": 0.13551519918004715
+    }
+  },
+  "asymmetric_toward_past": true,
+  "smoothed_leads_nationally": false,
+  "smoothed_leads_county": false,
+  "verdict": "TRAILING, not centered. The smoothed series never leads the raw series at either the national or the selected-county level (it only matches or lags), and the full-history correlation sweep is asymmetric toward the past at every tested lag. This is the empirical signature of a trailing filter. No evidence of a dominant lookahead component was found -- see Section 7's confound note for the residual uncertainty a bundled smoothing/seasonal-adjustment comparison can't fully rule out."
+}

@@ -1,0 +1,79 @@
+{
+  "feature_steps": {
+    "baseline": [
+      "momentum_1m",
+      "momentum_3m",
+      "momentum_6m"
+    ],
+    "step2_rate_level": [
+      "momentum_1m",
+      "momentum_3m",
+      "momentum_6m",
+      "mortgage_rate_level"
+    ],
+    "step3_rate_change": [
+      "momentum_1m",
+      "momentum_3m",
+      "momentum_6m",
+      "mortgage_rate_level",
+      "mortgage_rate_roc",
+      "rate_roc_x_momentum"
+    ]
+  },
+  "step_summaries": {
+    "baseline": {
+      "mean_roc_auc": 0.8535714860377935,
+      "std_roc_auc": 0.027578594106172333,
+      "mean_pr_auc": 0.3566199205907268,
+      "std_pr_auc": 0.12280809078494871,
+      "pooled_roc_auc": 0.8873488061127207,
+      "pooled_pr_auc": 0.4138612171353657,
+      "pooled_prevalence": 0.03621157681123771,
+      "n_folds": 11
+    },
+    "step2_rate_level": {
+      "mean_roc_auc": 0.8529149176675156,
+      "std_roc_auc": 0.028600423864680376,
+      "mean_pr_auc": 0.3559108850716799,
+      "std_pr_auc": 0.12086229414974566,
+      "pooled_roc_auc": 0.8857811748285679,
+      "pooled_pr_auc": 0.4084114785238589,
+      "pooled_prevalence": 0.03621157681123771,
+      "n_folds": 11
+    },
+    "step3_rate_change": {
+      "mean_roc_auc": 0.8532495671107104,
+      "std_roc_auc": 0.029520437540422426,
+      "mean_pr_auc": 0.35587372668691997,
+      "std_pr_auc": 0.12190374033379811,
+      "pooled_roc_auc": 0.8854037129471295,
+      "pooled_pr_auc": 0.40618617284041947,
+      "pooled_prevalence": 0.03621157681123771,
+      "n_folds": 11
+    }
+  },
+  "min_fold_positives": 20,
+  "n_folds_used": 11,
+  "n_folds_skipped": 0,
+  "skipped_fold_ids": [],
+  "delta_step2_vs_baseline": {
+    "point_delta": -0.0015676312841528262,
+    "ci_95_low": -0.0039061629535514395,
+    "ci_95_high": 0.0011830687489494392,
+    "n_bootstrap_used": 2000,
+    "significant": false
+  },
+  "delta_step3_vs_step2": {
+    "point_delta": -0.0003774618814383901,
+    "ci_95_low": -0.0017390894820057457,
+    "ci_95_high": 0.0009334306019039254,
+    "n_bootstrap_used": 2000,
+    "significant": false
+  },
+  "interaction_coefficient": 0.19202485449315487,
+  "interaction_expected_sign": "negative",
+  "interaction_observed_sign": "positive",
+  "interaction_sign_matches": false,
+  "n_bootstrap": 2000,
+  "random_state": 42
+}

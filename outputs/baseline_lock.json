@@ -1,0 +1,21 @@
+{
+  "mean_roc_auc": 0.9999797969886881,
+  "std_roc_auc": 3.094770265694336e-05,
+  "mean_pr_auc": 0.9997200583368443,
+  "std_pr_auc": 0.00031870004266366806,
+  "pooled_roc_auc": 0.9999828270946792,
+  "pooled_pr_auc": 0.9995719207239954,
+  "pooled_prevalence": 0.03826537330465698,
+  "n_folds": 11,
+  "feature_columns": [
+    "momentum_1m",
+    "momentum_3m",
+    "momentum_6m"
+  ],
+  "cv_folds_path": "../outputs/cv_folds.json",
+  "min_fold_positives": 20,
+  "n_folds_available": 11,
+  "n_folds_used": 11,
+  "model": "LogisticRegression(standardized)",
+  "random_state": 42
+}

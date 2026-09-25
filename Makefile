@@ -27,7 +27,7 @@ NOTEBOOKS := \
 	09_robustness_second_algo.ipynb \
 	10_final_evaluation.ipynb
 
-.PHONY: notebooks notebook-% clean-outputs test lint
+.PHONY: notebooks notebook-% clean-outputs test
 
 # Runs every notebook in dependency order, in-place, stopping immediately
 # (and loudly) if any one of them fails -- `jupyter nbconvert --execute`
@@ -64,8 +64,8 @@ clean-outputs:
 	rm -f data/processed/*.csv
 	@echo "Cleared outputs/ and data/processed/ (data/raw/ and the database were not touched)."
 
+# Runs the pytest suite in tests/ (config in pyproject.toml). Uses small
+# synthetic DataFrames only -- no database, network, or raw data needed.
+# `python -m pytest` so it runs under the active .venv's interpreter.
 test:
-	pytest
-
-lint:
-	ruff check .
+	python -m pytest

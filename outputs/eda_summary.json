@@ -1,0 +1,18 @@
+{
+  "expected_sign": "positive",
+  "winning_lag_months": 12,
+  "winning_correlation": -0.05210721275801479,
+  "winning_ci_95": [
+    -0.05684472949963459,
+    -0.047367349491352156
+  ],
+  "winning_p_value": 1.3112429486147186e-102,
+  "winning_n_rows": 170145,
+  "sign_matches_hypothesis": false,
+  "label_row_count_check": {
+    "observed_rows": 173277,
+    "observed_positive_rate_pct": 4.878893332640801,
+    "expected_rows_per_phase0_framing": 173824,
+    "expected_positive_rate_pct_per_phase0_framing": 4.96
+  }
+}

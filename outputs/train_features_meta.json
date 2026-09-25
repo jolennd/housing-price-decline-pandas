@@ -1,0 +1,15 @@
+{
+  "n_rows": 164460,
+  "n_counties": 3009,
+  "positive_rate_pct": 4.851635656086587,
+  "roc_lag_months": 12,
+  "feature_columns": [
+    "momentum_1m",
+    "momentum_3m",
+    "momentum_6m",
+    "mortgage_rate_level",
+    "mortgage_rate_roc",
+    "rate_roc_x_momentum"
+  ],
+  "expected_interaction_sign": "negative"
+}
