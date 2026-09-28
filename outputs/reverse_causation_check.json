@@ -1,0 +1,14 @@
+{
+  "expected_sign": "positive",
+  "national_momentum_window_months": 3,
+  "national_aggregation": "median",
+  "winning_lag_months": 14,
+  "winning_correlation": 0.2637338618785663,
+  "winning_ci_95": [
+    0.14631938835414832,
+    0.3738207218113546
+  ],
+  "winning_p_value": 1.771894935673083e-05,
+  "winning_n_rows": 258,
+  "sign_matches_hypothesis": true
+}
