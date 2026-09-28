@@ -1,11 +1,11 @@
 {
-  "mean_roc_auc": 0.9999797969886881,
-  "std_roc_auc": 3.094770265694336e-05,
-  "mean_pr_auc": 0.9997200583368443,
-  "std_pr_auc": 0.00031870004266366806,
-  "pooled_roc_auc": 0.9999828270946792,
-  "pooled_pr_auc": 0.9995719207239954,
-  "pooled_prevalence": 0.03826537330465698,
+  "mean_roc_auc": 0.8535714860377935,
+  "std_roc_auc": 0.027578594106172333,
+  "mean_pr_auc": 0.3566199205907268,
+  "std_pr_auc": 0.12280809078494871,
+  "pooled_roc_auc": 0.8873488061127207,
+  "pooled_pr_auc": 0.4138612171353657,
+  "pooled_prevalence": 0.03621157681123771,
   "n_folds": 11,
   "feature_columns": [
     "momentum_1m",
