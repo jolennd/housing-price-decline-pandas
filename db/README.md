@@ -1,8 +1,6 @@
 # Local Postgres setup (independent of the bootcamp server)
 
-These tables were converted from the "Housing Price Decline" project's
-SQLite database (`data/processed/housing.db` there) so this team project can
-load the same data into a **local** Postgres database — one that keeps
+These tables were converted from an SQLite database so this team project can load the same data into a **local** Postgres database — one that keeps
 working after the bootcamp's shared server goes away. Nothing here touches
 the original SQLite file or that project's folder.
 
