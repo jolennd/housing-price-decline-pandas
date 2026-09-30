@@ -1,9 +1,7 @@
 # Housing-Risk-Teamwork -- notebook pipeline
 #
-# Mirrors the Housing Price Decline reference project's Makefile
-# conventions, adapted for this project: a Postgres database (via
-# src/housing_risk/config.py's get_engine(), populated by notebooks
-# 01-03) instead of a rebuildable local SQLite file, so there is no
+# Data lives in a Postgres database (via src/housing_risk/config.py's
+# get_engine(), populated by notebooks 01-03), so there is no
 # `make data` target here -- ingest is notebooks 01/02/02b, and the
 # `county_month_check` table those feed is built and verified by
 # notebook 03. Each notebook writes its own inputs for the next one
