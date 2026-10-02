@@ -6,8 +6,7 @@ server.
 
 Files in this `db/` directory:
 
-- `schema.sql` — Postgres DDL for the 4 tables (converted from that
-  project's `sql/001_schema.sql`).
+- `schema.sql` — Postgres DDL for the 4 tables.
 - `data/*.csv` — a full export of each table (`zhvi_monthly`,
   `county_coverage`, `mortgage_monthly`, `county_month`), ~710k rows in the
   two largest.
@@ -36,10 +35,10 @@ createdb housing_risk
 ## 3. Load the schema and data
 
 Run these from inside this `db/` directory (the `\copy` paths in `load.sql`
-are relative to where `psql` is launched):
+are relative to where `psql` is launched). From the project root:
 
 ```bash
-cd "michel-capstone-housing-risk-main/db"
+cd db
 psql housing_risk -f schema.sql
 psql housing_risk -f load.sql
 ```
@@ -60,7 +59,7 @@ county_month 709996.
 
 Postgres.app's default server has no password and listens on 5432 under
 your macOS username. Update (or create) `.env` in the project root
-(`michel-capstone-housing-risk-main/.env`, already gitignored):
+(`Housing-Risk-Teamwork/.env`, already gitignored):
 
 ```
 PGHOST=localhost

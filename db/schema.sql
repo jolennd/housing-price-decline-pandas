@@ -1,6 +1,6 @@
--- Postgres schema for the Housing Price Decline tables, converted from
--- ../../Housing Price Decline/sql/001_schema.sql (SQLite). Column types
--- mapped: SQLite TEXT -> TEXT, REAL -> DOUBLE PRECISION, INTEGER -> INTEGER.
+-- Postgres schema for this project's tables, converted from a SQLite
+-- schema. Column types mapped: SQLite TEXT -> TEXT, REAL -> DOUBLE
+-- PRECISION, INTEGER -> INTEGER.
 -- Booleans stored as 0/1 in SQLite (has_internal_gap, no_training_presence)
 -- are kept as INTEGER here for a byte-for-byte data match; cast to boolean
 -- in queries if preferred.
