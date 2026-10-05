@@ -2,13 +2,40 @@
   "expected_sign": "positive",
   "national_momentum_window_months": 3,
   "national_aggregation": "median",
-  "winning_lag_months": 14,
-  "winning_correlation": 0.2637338618785663,
-  "winning_ci_95": [
-    0.14631938835414832,
-    0.3738207218113546
-  ],
-  "winning_p_value": 1.771894935673083e-05,
-  "winning_n_rows": 258,
-  "sign_matches_hypothesis": true
+  "variants": {
+    "A_full_rate_history": {
+      "winning_lag_months": 14,
+      "winning_correlation": 0.2637338618785663,
+      "winning_ci_95_fisher": [
+        0.14631938835414832,
+        0.3738207218113546
+      ],
+      "winning_ci_95_block_bootstrap": [
+        0.04948556541377648,
+        0.36944629280957597
+      ],
+      "winning_p_value_single_lag": 1.771894935673083e-05,
+      "best_of_18_p_value": 0.0,
+      "winning_n_rows": 258,
+      "sign_matches_hypothesis": true
+    },
+    "B_rates_through_train_end": {
+      "winning_lag_months": 4,
+      "winning_correlation": 0.12381487879003086,
+      "winning_ci_95_fisher": [
+        0.0007393589138620074,
+        0.2431953748750566
+      ],
+      "winning_ci_95_block_bootstrap": [
+        0.007024433459276145,
+        0.22617512072295387
+      ],
+      "winning_p_value_single_lag": 0.04870759310589363,
+      "best_of_18_p_value": 0.3905,
+      "winning_n_rows": 254,
+      "sign_matches_hypothesis": true
+    }
+  },
+  "best_of_18_method": "rate-of-change series circularly shifted by >= 24 months, 2000 resamples, seed 42",
+  "block_bootstrap_method": "12-month blocks, 2000 resamples, seed 42"
 }
