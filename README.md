@@ -41,7 +41,7 @@ db/           SQL schema and (gitignored) data exports
 | Phase 6 — Final evaluation | Marginal AUC deltas on the held-out test set, bootstrap confidence intervals, final write-up | `10_final_evaluation.ipynb` |
 | Phase 7 — Communication | Dashboard, repo, slides | *(not started)* |
 
-`04_teammate_pandas_comparison.ipynb` is a standalone comparison against a teammate's independent ingest pipeline and isn't part of the numbered phase sequence above.
+`04_teammate_pandas_comparison.ipynb` is a standalone notebook and isn't part of the numbered phase sequence above.
 
 `00_zhvi_smoothing_check.ipynb` also isn't part of the numbered phase sequence -- it's a foundational leakage-safety check (confirms Zillow's ZHVI smoothing filter is trailing, not centered) that the momentum features in Phase 4 depend on, run once rather than tied to a specific phase.
 
@@ -83,7 +83,3 @@ PGDATABASE=...
 PGUSER=...
 PGPASSWORD=...
 ```
-
-## Collaboration
-
-Built in parallel with a teammate's own repo — each phase is independently attempted by both, compared, and the better (or merged) version is carried into the shared final repo. Decisions and comparison results are logged as they happen.

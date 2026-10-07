@@ -9,6 +9,16 @@
   "winning_p_value": 1.3112429486147186e-102,
   "winning_n_rows": 170145,
   "sign_matches_hypothesis": false,
+  "winning_quarter_level": {
+    "correlation": -0.16515473048066648,
+    "ci_95": [
+      -0.3677442035964897,
+      0.05240120771355592
+    ],
+    "p_value": 0.13567833026908924,
+    "n_quarters": 83,
+    "ci_includes_zero": true
+  },
   "label_row_count_check": {
     "observed_rows": 173277,
     "observed_positive_rate_pct": 4.878893332640801,
