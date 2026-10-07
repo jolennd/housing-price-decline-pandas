@@ -59,7 +59,7 @@ county_month 709996.
 
 Postgres.app's default server has no password and listens on 5432 under
 your macOS username. Update (or create) `.env` in the project root
-(`Housing-Risk-Teamwork/.env`, already gitignored):
+(`housing-price-decline-pandas/.env`, already gitignored):
 
 ```
 PGHOST=localhost

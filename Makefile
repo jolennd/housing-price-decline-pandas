@@ -1,4 +1,4 @@
-# Housing-Risk-Teamwork -- notebook pipeline
+# housing-price-decline-pandas -- notebook pipeline
 #
 # Data lives in a Postgres database (via src/housing_risk/config.py's
 # get_engine(), populated by notebooks 01-03), so there is no
