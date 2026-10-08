@@ -12,8 +12,11 @@
 NBCONVERT := jupyter nbconvert --to notebook --execute --inplace --ExecutePreprocessor.timeout=1800
 NOTEBOOK_DIR := notebooks
 
+# 00 runs after 01 because it compares against the smoothed Zillow file that
+# 01 downloads; 11 runs last.
 NOTEBOOKS := \
 	01_zillow_ingest_clean.ipynb \
+	00_zhvi_smoothing_check.ipynb \
 	02_fred_ingest_clean.ipynb \
 	02b_fred_resample_sensitivity.ipynb \
 	03_join_sql_load.ipynb \
@@ -23,7 +26,8 @@ NOTEBOOKS := \
 	07_feature_engineering.ipynb \
 	08_modeling_sequence.ipynb \
 	09_robustness_second_algo.ipynb \
-	10_final_evaluation.ipynb
+	10_final_evaluation.ipynb \
+	11_reverse_causation_check.ipynb
 
 .PHONY: notebooks notebook-% clean-outputs test
 

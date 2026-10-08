@@ -67,7 +67,7 @@ This is a **per-row** requirement, not a requirement that a county's full histor
 
 Zero counties should be dropped during the join step, since this pipeline requires no geographic crosswalk — any dropped county indicates an implementation error, not a genuine geography mismatch.
 
-## Train/Test Split (Phase 3, decided here for reference)
+## Train/Test Split (decided here for reference)
 
 - **Train:** through 2021-09-30
 - **Embargo:** 2021-10-01 to 2021-12-31 (excluded from both train and test — guards against serial correlation in the rolling-window momentum features near the boundary)

@@ -24,7 +24,7 @@ DB_USER = os.environ.get("PGUSER", "postgres")
 DB_PASSWORD = os.environ.get("PGPASSWORD", "")
 DB_HOST = os.environ.get("PGHOST", "localhost")
 DB_PORT = os.environ.get("PGPORT", "5432")
-DB_NAME = os.environ.get("PGDATABASE", "housing_decline")
+DB_NAME = os.environ.get("PGDATABASE", "housing_risk")
 
 
 def get_engine() -> Engine:
