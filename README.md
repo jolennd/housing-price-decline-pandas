@@ -74,7 +74,6 @@ db/           SQL schema and (gitignored) data exports
 | Phase 4 — Feature engineering | Momentum, rate level, rate-of-change, interaction term                                                       | `07_feature_engineering.ipynb`                                                                                                |
 | Phase 5 — Modeling            | Baseline (momentum only) → + rate level → + rate-of-change/interaction → robustness check (second algorithm) | `08_modeling_sequence.ipynb`, `09_robustness_second_algo.ipynb`                                                               |
 | Phase 6 — Final evaluation    | Marginal AUC deltas on the held-out test set, bootstrap confidence intervals, reverse-causation check        | `10_final_evaluation.ipynb`, `11_reverse_causation_check.ipynb`                                                               |
-| Phase 7 — Communication       | Dashboard, repo, slides                                                                                      | _(not started)_                                                                                                               |
 
 `04_teammate_pandas_comparison.ipynb` is a standalone notebook and isn't part of the numbered phase sequence above.
 
@@ -93,7 +92,6 @@ Success criteria, data provenance figures, and the train/test split live in `doc
 - ✅ Phase 4 — Feature engineering
 - ✅ Phase 5 — Modeling
 - ✅ Phase 6 — Final evaluation
-- 🔲 Phase 7 — Communication (not started)
 
 The empirical check confirming Zillow's ZHVI smoothing filter is trailing rather than centered (i.e. that momentum features don't leak future information) has been run against this project's own downloaded data in `notebooks/00_zhvi_smoothing_check.ipynb` — confirmed trailing, not centered. The full numeric result is saved in `outputs/zhvi_smoothing_check.json`.
 
