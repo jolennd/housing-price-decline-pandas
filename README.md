@@ -24,7 +24,7 @@ data/         raw and processed data (not tracked in git)
 notebooks/    one notebook per phase, numbered 01-10 (see Phase Plan below)
 src/          reusable Python helper functions (housing_risk package)
 outputs/      exported charts, persisted results, and CV fold definitions
-docs/         business framing and team reference documentation
+docs/         business framing and planning documentation
 db/           SQL schema and (gitignored) data exports
 ```
 
@@ -45,7 +45,7 @@ db/           SQL schema and (gitignored) data exports
 
 `00_zhvi_smoothing_check.ipynb` also isn't part of the numbered phase sequence -- it's a foundational leakage-safety check (confirms Zillow's ZHVI smoothing filter is trailing, not centered) that the momentum features in Phase 4 depend on, run once rather than tied to a specific phase.
 
-Full phase-by-phase detail, success criteria, and data provenance figures live in `docs/Housing_Price_Decline_Team_Reference.md` and `docs/phase0_framing.md`.
+Success criteria, data provenance figures, and the train/test split live in `docs/phase0_framing.md`.
 
 ## Status
 
@@ -58,7 +58,7 @@ Full phase-by-phase detail, success criteria, and data provenance figures live i
 - ✅ Phase 6 — Final evaluation
 - 🔲 Phase 7 — Communication (not started)
 
-The empirical check confirming Zillow's ZHVI smoothing filter is trailing rather than centered (i.e. that momentum features don't leak future information) has been run against this project's own downloaded data in `notebooks/00_zhvi_smoothing_check.ipynb` — confirmed trailing, not centered. See `docs/Housing_Price_Decline_Team_Reference.md`'s ZHVI Smoothing Verification section for the full result.
+The empirical check confirming Zillow's ZHVI smoothing filter is trailing rather than centered (i.e. that momentum features don't leak future information) has been run against this project's own downloaded data in `notebooks/00_zhvi_smoothing_check.ipynb` — confirmed trailing, not centered. The full numeric result is saved in `outputs/zhvi_smoothing_check.json`.
 
 ## Setup
 
