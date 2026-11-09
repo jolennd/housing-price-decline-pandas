@@ -102,8 +102,7 @@ This project uses a plain Python virtual environment (no Anaconda required):
 ```
 python -m venv .venv
 source .venv/bin/activate
-pip install -r requirements.mac.txt   # macOS/Linux
-# pip install -r requirements.txt     # Windows (adds the Windows-only pywinpty)
+pip install -r requirements.txt       # pywinpty installs on Windows only
 pip install -e .
 ```
 

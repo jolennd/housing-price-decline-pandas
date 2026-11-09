@@ -14,7 +14,7 @@ A dollar payment estimate trends upward with nominal home prices over time, so t
 
 ## 3. Dependency check
 
-`numpy==2.5.3`, `pandas==3.0.6`, and `scikit-learn==1.9.1` are already pinned in both `requirements.txt` and `requirements.mac.txt`, and the amortization formula only needs pandas arithmetic and the `**` operator, so the feature itself needs nothing new. However, `pytest` is not in either requirements file, and step 5 needs it. Add `pytest` to both requirements files and install it in `.venv`.
+`numpy==2.5.3`, `pandas==3.0.6`, and `scikit-learn==1.9.1` are already pinned in `requirements.txt`, and the amortization formula only needs pandas arithmetic and the `**` operator, so the feature itself needs nothing new. However, `pytest` is not in `requirements.txt`, and step 5 needs it. Add `pytest` to `requirements.txt` and install it in `.venv`.
 
 ## 4. Write the feature function in `features.py`
 
