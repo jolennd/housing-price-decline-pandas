@@ -127,7 +127,12 @@ PGPASSWORD=...
 
 ## Running
 
-Run the notebooks in order (00 to 11), or use the Makefile:
+Activate the virtual environment first (`source .venv/bin/activate`), both before
+starting Jupyter and before running `make`. The notebooks use the generic `python3`
+kernel, which runs whichever `python` comes first on your `PATH`; without the venv
+active they run against a different interpreter and can't import `housing_risk`.
+
+Run the notebooks in pipeline order (01, then 00, 02, 02b, 03 ... 11), or use the Makefile:
 
 ```
 make notebooks      # runs every notebook in dependency order, stopping at the first failure
