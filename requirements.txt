@@ -1,5 +1,6 @@
 altair==6.3.0
 anyio==4.15.1
+appnope==1.0.0; sys_platform == "darwin"
 argon2-cffi==25.1.0
 argon2-cffi-bindings==26.1.0
 arrow==1.4.0
@@ -75,6 +76,7 @@ packaging==26.3
 pandas==3.0.6
 pandocfilters==1.5.1
 parso==0.8.7
+pexpect==4.9.0; sys_platform != "win32"
 pillow==13.0.0
 platformdirs==4.11.11
 pluggy==1.6.0
@@ -83,6 +85,7 @@ prompt_toolkit==3.0.53
 protobuf==7.36.2
 psutil==7.2.2
 psycopg2-binary==2.9.13
+ptyprocess==0.7.0; sys_platform != "win32"
 pure_eval==0.2.4
 pyarrow==25.0.1
 pycparser==3.0
@@ -94,7 +97,7 @@ python-dateutil==2.9.0.post0
 python-dotenv==1.2.3
 python-json-logger==4.2.0
 python-multipart==0.0.32
-pywinpty==3.0.5
+pywinpty==3.0.5; sys_platform == "win32"
 PyYAML==6.0.3
 pyzmq==27.2.0
 referencing==0.37.0
