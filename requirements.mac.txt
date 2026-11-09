@@ -9,7 +9,7 @@ attrs==26.1.0
 babel==2.18.0
 beautifulsoup4==4.15.0
 bleach==6.4.0
-certifi==2026.7.22
+certifi==2026.10.18
 cffi==2.1.1
 charset-normalizer==3.5.1
 click==8.5.0
@@ -65,7 +65,7 @@ matplotlib-inline==0.2.2
 mistune==3.3.4
 narwhals==2.26.0
 nbclient==0.11.0
-nbconvert==7.17.1
+nbconvert==7.17.2
 nbformat==5.11.1
 nest-asyncio2==1.7.2
 notebook==7.6.3
@@ -75,7 +75,7 @@ packaging==26.3
 pandas==3.0.6
 pandocfilters==1.5.1
 parso==0.8.7
-pillow==12.3.0
+pillow==13.0.0
 platformdirs==4.11.11
 pluggy==1.6.0
 prometheus_client==0.26.0
@@ -111,12 +111,11 @@ soupsieve==2.9.2
 SQLAlchemy==2.0.54
 stack-data==0.6.3
 starlette==1.6.0
-streamlit==1.64.0
 terminado==0.18.1
 threadpoolctl==3.7.0
 tinycss2==1.5.1
 toml==0.10.2
-tornado==6.5.10
+tornado==6.6
 traitlets==5.16.1
 typing_extensions==4.16.0
 tzdata==2026.4
