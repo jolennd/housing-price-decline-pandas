@@ -104,7 +104,7 @@ scipy==1.18.1
 seaborn==0.13.2
 Send2Trash==2.1.0
 six==1.17.0
-soupsieve==2.9.2
+soupsieve==4.0.1
 SQLAlchemy==2.0.54
 stack-data==0.6.3
 terminado==0.18.1
